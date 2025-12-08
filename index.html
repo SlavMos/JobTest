@@ -7,5 +7,31 @@
     <link rel="stylesheet" href="./scss/style.scss" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <p class="text">Enjoy your studying!</p>
+        <h1 class="title">Our online courses</h1>
+        <div class="searc-filter">
+          <div class="filter">
+            <button class="filter__btn">All</button>
+            <button class="filter__btn">Marketing</button>
+            <button class="filter__btn">Management</button>
+            <button class="filter__btn">HR & Recruiting</button>
+            <button class="filter__btn">Design</button>
+            <button class="filter__btn">Development</button>
+          </div>
+          <input class="search" type="text" placeholder="Search course.." />
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="cards"></div>
+      </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/filter.js"></script>
+  </body>
 </html>
