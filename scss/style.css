@@ -87,6 +87,11 @@ body {
     font-size: 35px;
   }
 }
+@media (max-width: 460px) {
+  .courses__title {
+    font-size: 32px;
+  }
+}
 
 .controls {
   display: flex;
