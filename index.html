@@ -3,35 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scss/reset.css" />
-    <link rel="stylesheet" href="./scss/style.scss" />
-    <title>Document</title>
+    <title>Online Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/scss/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <p class="text">Enjoy your studying!</p>
-        <h1 class="title">Our online courses</h1>
-        <div class="searc-filter">
-          <div class="filter">
-            <button class="filter__btn">All</button>
-            <button class="filter__btn">Marketing</button>
-            <button class="filter__btn">Management</button>
-            <button class="filter__btn">HR & Recruiting</button>
-            <button class="filter__btn">Design</button>
-            <button class="filter__btn">Development</button>
+    <div class="container">
+      <p class="text">Enjoy your studying!</p>
+      <h1 class="courses__title">Our online courses</h1>
+      <section class="courses" aria-label="Courses catalog">
+        <!-- Top section: title and controls -->
+        <div class="courses__top">
+          <div class="courses__title-wrap"></div>
+
+          <div class="controls" aria-label="Search and filters">
+            <!-- Filters -->
+            <div
+              class="filters"
+              id="filters"
+              role="tablist"
+              aria-label="Categories"
+            >
+              <button
+                class="filters__btn filters__btn--active"
+                data-category="all"
+              >
+                All
+              </button>
+              <button class="filters__btn" data-category="Design">
+                Design
+              </button>
+              <button class="filters__btn" data-category="Development">
+                Development
+              </button>
+              <button class="filters__btn" data-category="Marketing">
+                Marketing
+              </button>
+              <button class="filters__btn" data-category="Management">
+                Management
+              </button>
+              <button class="filters__btn" data-category="HR & Recruiting">
+                HR & Recruiting
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="search" title="Search courses">
+              <input
+                id="search"
+                type="search"
+                placeholder="Search courses..."
+                aria-label="Search courses by title"
+              />
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="opacity: 0.6; margin-right: 8px"
+              >
+                <path
+                  d="M21 21l-4.35-4.35"
+                  stroke="#555"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="6"
+                  stroke="#555"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </div>
-          <input class="search" type="text" placeholder="Search course.." />
         </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="container">
-        <div class="cards"></div>
-      </div>
-    </main>
+
+        <!-- карточки -->
+        <div class="grid" id="grid" aria-live="polite"></div>
+      </section>
+    </div>
     <script src="js/data.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/filter.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
