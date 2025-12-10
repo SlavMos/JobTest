@@ -137,6 +137,11 @@ body {
   background: #fff;
   box-sizing: border-box;
 }
+@media (max-width: 560px) {
+  .search input {
+    font-size: 30px;
+  }
+}
 .search svg {
   position: absolute;
   right: 10px;
