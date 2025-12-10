@@ -139,7 +139,7 @@ body {
 }
 @media (max-width: 560px) {
   .search input {
-    font-size: 30px;
+    font-size: 10px;
   }
 }
 .search svg {
