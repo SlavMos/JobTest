@@ -144,7 +144,10 @@ body {
 }
 @media (max-width: 560px) {
   .search input {
-    font-size: 10px;
+    font-size: 8px;
+    width: 90px;
+    height: 30px;
+    padding-right: 10px;
   }
 }
 .search svg {
@@ -154,6 +157,11 @@ body {
   transform: translateY(-50%);
   opacity: 0.6;
   pointer-events: none;
+}
+@media (max-width: 560px) {
+  .search svg {
+    right: 15px;
+  }
 }
 
 .grid {
